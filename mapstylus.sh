@@ -2,9 +2,9 @@
 
 echo 'Did you touch the stylus to the screen yet?'
 while true; do
-    read -p "(y)es/(n)o :" yn
+    read -p "(y)es/(n)o : " yn
     case $yn in
-        [yY] ) echo user selected yes;
+        [yY] ) echo proceeding..;
             break;;
         [nN] ) echo 'do it then';   
             exit;; 
@@ -13,11 +13,8 @@ while true; do
 
 done
 
-echo proceeding...
-
 # pull stylus id
 stylusidraw=$(xinput | grep "Stylus Pen" | cut -d$'\t' -f 2)
-echo 'stylusidraw is '$stylusidraw
 stylusid=$(echo $stylusidraw | cut -d '=' -f 2)
 echo 'stylus id is' $stylusid
 
