@@ -6,9 +6,9 @@ while true; do
     case $yn in
         [yY] ) echo user selected yes;
             break;;
-        [nN] ) echo exiting;   
+        [nN] ) echo 'do it then';   
             exit;; 
-        * ) echo try again;;
+        * ) echo invalid answer;;
     esac
 
 done
